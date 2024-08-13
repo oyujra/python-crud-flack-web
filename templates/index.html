@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Registros</title>
+</head>
+<body>
+    <h1>Listado de Registros</h1>
+    <a href="{{ url_for('add_record') }}">Agregar Nuevo Registro</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Estado</th>
+            <th>ID Registro</th>
+            <th>Matricula</th>
+            <th>Razon Social</th>
+            <th>Cod Estado Actualizacion</th>
+            <th>Cod Departamento</th>
+            <th>ID Establecimiento</th>
+            <th>Direccion</th>
+            <th>Respuesta JSON</th>
+            <th>Acciones</th>
+        </tr>
+        {% for registro in registros %}
+        <tr>
+            <td>{{ registro[0] }}</td>
+            <td>{{ registro[1] }}</td>
+            <td>{{ registro[2] }}</td>
+            <td>{{ registro[3] }}</td>
+            <td>{{ registro[4] }}</td>
+            <td>{{ registro[5] }}</td>
+            <td>{{ registro[6] }}</td>
+            <td>{{ registro[7] }}</td>
+            <td>{{ registro[8] }}</td>
+            <td>{{ registro[9] }}</td>
+            <td>
+                <a href="{{ url_for('edit_record', id_registro=registro[0]) }}">Editar</a>
+                <a href="{{ url_for('delete_record', id_registro=registro[0]) }}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

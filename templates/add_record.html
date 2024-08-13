@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Registro</title>
+</head>
+<body>
+    <h1>Agregar Nuevo Registro</h1>
+    <form method="POST">
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" required><br>
+        
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required><br>
+        
+        <label for="matricula">Matricula:</label>
+        <input type="text" id="matricula" name="matricula" required><br>
+        
+        <label for="razon_social">Razón Social:</label>
+        <textarea id="razon_social" name="razon_social" required></textarea><br>
+        
+        <label for="cod_estado_actualizacion">Código Estado Actualización:</label>
+        <input type="text" id="cod_estado_actualizacion" name="cod_estado_actualizacion" required><br>
+        
+        <label for="cod_departamento">Código Departamento:</label>
+        <input type="text" id="cod_departamento" name="cod_departamento" required><br>
+        
+        <label for="id_establecimiento">ID Establecimiento:</label>
+        <input type="text" id="id_establecimiento" name="id_establecimiento" required><br>
+        
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required><br>
+        
+        <label for="respuesta_json">Respuesta JSON:</label>
+        <textarea id="respuesta_json" name="respuesta_json" required></textarea><br>
+        
+        <input type="submit" value="Agregar Registro">
+    </form>
+    <a href="{{ url_for('index') }}">Volver al Listado</a>
+</body>
+</html>

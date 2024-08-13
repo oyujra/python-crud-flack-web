@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Registro</title>
+</head>
+<body>
+    <h1>Editar Registro</h1>
+    <form method="POST">
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" value="{{ registro[1] }}" required><br>
+        
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" value="{{ registro[2] }}" required><br>
+        
+        <label for="matricula">Matricula:</label>
+        <input type="text" id="matricula" name="matricula" value="{{ registro[3] }}" required><br>
+        
+        <label for="razon_social">Razón Social:</label>
+        <textarea id="razon_social" name="razon_social" required>{{ registro[4] }}</textarea><br>
+        
+        <label for="cod_estado_actualizacion">Código Estado Actualización:</label>
+        <input type="text" id="cod_estado_actualizacion" name="cod_estado_actualizacion" value="{{ registro[5] }}" required><br>
+        
+        <label for="cod_departamento">Código Departamento:</label>
+        <input type="text" id="cod_departamento" name="cod_departamento" value="{{ registro[6] }}" required><br>
+        
+        <label for="id_establecimiento">ID Establecimiento:</label>
+        <input type="text" id="id_establecimiento" name="id_establecimiento" value="{{ registro[7] }}" required><br>
+        
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" value="{{ registro[8] }}" required><br>
+        
+        <label for="respuesta_json">Respuesta JSON:</label>
+        <textarea id="respuesta_json" name="respuesta_json" required>{{ registro[9] }}</textarea><br>
+        
+        <input type="submit" value="Actualizar Registro">
+    </form>
+    <a href="{{ url_for('index') }}">Volver al Listado</a>
+</body>
+</html>
